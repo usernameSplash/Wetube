@@ -10,3 +10,5 @@ the clone project of youtube
 - set .gitignore
 - set babel option
 - make "Hello World" program
+- apply nodemon
+- test middleware
