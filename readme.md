@@ -12,3 +12,9 @@ the clone project of youtube
 - make "Hello World" program
 - apply nodemon
 - test middleware
+
+## 2. Add middleware, router (02/11)
+
+- install morgan, helmet, bodyparser, cookieparser
+- make module("app.js")
+- add router
