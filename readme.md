@@ -17,4 +17,5 @@ the clone project of youtube
 
 - install morgan, helmet, bodyparser, cookieparser
 - make module("app.js")
-- add router
+- add router, urls
+- build the structure for MVC pattern
