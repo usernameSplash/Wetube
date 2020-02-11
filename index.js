@@ -1,4 +1,9 @@
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import express from "express";
+import helmet from "helmet";
+import morgan from "morgan";
+
 const app = express();
 
 const PORT = 4000;
@@ -7,19 +12,16 @@ const handleListening = () => {
   console.log(`Listening on: http://localhost:${PORT}`);
 };
 
-app.use((req, res, next) => {
-  console.log("I'm between");
-  next();
-});
+const handleHome = (req, res) => res.send("Wetube");
+const handleProfile = (req, res) => res.send("Profile");
 
-app.get("/", (req, res) => {
-  console.log("Home");
-  res.send("Wetube");
-});
+app.use(cookieParser());
+app.use(bodyParser.json);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet());
+app.use(morgan("dev"));
 
-app.get("/profile", (req, res) => {
-  console.log("Profile");
-  res.send("You are on profile page.");
-});
+app.get("/", handleHome);
+app.get("/profile", handleProfile);
 
 app.listen(PORT, handleListening);
