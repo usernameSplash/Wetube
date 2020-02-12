@@ -26,3 +26,4 @@ the clone project of youtube
 - add pug files for rendering pages
 - add layouts
 - add partials (footer, header)
+- add local variables into templates(pug files) by middleware and controller
