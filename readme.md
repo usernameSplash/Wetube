@@ -20,3 +20,9 @@ the clone project of youtube
 - add router, urls
 - make functions in controller module
 - install pug
+
+## 3. View Parts with Pug (02/12)
+
+- add pug files for rendering pages
+- add layouts
+- add partials
