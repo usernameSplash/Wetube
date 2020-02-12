@@ -9,7 +9,7 @@ import {
 } from "../controller/videoController";
 const videoRouter = express.Router();
 
-videoRouter.get(routes.home, videos);
+// videoRouter.get(routes.home, videos);
 videoRouter.get(routes.upload, uploadVideo);
 videoRouter.get(routes.editVideo, editVideo);
 videoRouter.get(routes.deleteVideo, deleteVideo);
