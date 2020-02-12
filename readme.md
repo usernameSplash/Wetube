@@ -25,4 +25,4 @@ the clone project of youtube
 
 - add pug files for rendering pages
 - add layouts
-- add partials
+- add partials (footer, header)
