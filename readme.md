@@ -27,3 +27,8 @@ the clone project of youtube
 - add layouts
 - add partials (footer, header)
 - add local variables into templates(pug files) by middleware and controller
+
+## 4. Add login, Join Button (02/13)
+
+- add login, join pages
+- add new partial file (socialLogin.pug)
