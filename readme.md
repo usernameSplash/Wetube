@@ -33,11 +33,15 @@ the clone project of youtube
 - add login, join pages
 - add new partial file (socialLogin.pug)
 
-## 5. Add Many Pages (02/14, 02/15)
+## 5. Add Many Actions into Pages (02/14, 02/15)
 
 - Many Pages
 	- Edit Profile
 	- Edit Video
 	- Video Upload
 	- Change Password
-- new
+
+## 6. Add Many Actions into Pages-2 (02/16)
+- Log in and user profile controller
+- Change the constitutions of the header by user authentication
+- Access to user detail page
