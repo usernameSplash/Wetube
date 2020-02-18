@@ -45,3 +45,6 @@ the clone project of youtube
 - Log in and user profile controller
 - Change the constitutions of the header by user authentication
 - Access to user detail page
+
+## Rest (02/18)
+I moved my development environment to macOS
