@@ -47,4 +47,4 @@ the clone project of youtube
 - Access to user detail page
 
 ## Rest (02/18)
-I moved my development environment to macOS
+I moved my development environment to macOS.
