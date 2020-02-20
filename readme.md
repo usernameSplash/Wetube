@@ -61,3 +61,7 @@ how to connect to MongoDB
 ```
 npm install mongoose
 ```
+for privacy
+```
+npm install dotenv
+```
