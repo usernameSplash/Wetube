@@ -48,3 +48,16 @@ the clone project of youtube
 
 ## Rest (02/18)
 I moved my development environment to macOS.
+
+## 7. Install MongoDB (02/20)
+how to install MongoDB in your macOS
+```
+brew install mongodb-community
+brew service start mongodb-community
+mongod
+mongo
+```
+how to connect to MongoDB
+```
+npm install mongoose
+```
