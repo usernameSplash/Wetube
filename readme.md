@@ -65,3 +65,5 @@ for privacy
 ```
 npm install dotenv
 ```
+
+- Add Models : Videos, Comments on MongoDB
