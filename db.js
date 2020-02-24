@@ -1,5 +1,6 @@
 import mongooese from "mongoose";
 import dotenv from "dotenv";
+
 dotenv.config();
 
 mongooese.connect(process.env.MONGO_URL, {

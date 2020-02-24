@@ -83,6 +83,7 @@ npm install dotenv
     -   Handle getEdit, postEdit
 -   View video details page
 
-## 9. Interaction with DB 2 : Delete Video(02/25)
+## 9. Interaction with DB 2 : Delete, Searching Video(02/25)
 
+-   Install, Set ESLint
 -   DeleteVideo
