@@ -4,7 +4,7 @@ include mixins/videoBlock
 block content
 	.search__header
 		h3 Searching by #{searchingBy}
-	.search__vidoes
+	.search__videos
 		each item in videos
 			+videoBlock({
 				title:item.title,

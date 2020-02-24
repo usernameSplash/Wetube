@@ -76,9 +76,13 @@ npm install dotenv
 
 -   Add Models : Videos, Comments on MongoDB
 
-## 8. Interaction with DB (02/21~23)
+## 8. Interaction with DB 1 : Add, Edit Video(02/21~23)
 
 -   Add video
 -   Edit video
     -   Handle getEdit, postEdit
 -   View video details page
+
+## 9. Interaction with DB 2 : Delete Video(02/25)
+
+-   DeleteVideo
