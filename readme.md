@@ -87,3 +87,13 @@ npm install dotenv
 
 -   Install, Set ESLint
 -   DeleteVideo
+
+## 10. WebPack (02/25)
+
+-   Webpack
+    -   Webpack is module bundler, js, sass in the webpack
+    -   Set css loader
+        -   find scss file
+        -   extract text
+        -   convert to css file
+        -   see "webpack.config.js" file to check this stuff
