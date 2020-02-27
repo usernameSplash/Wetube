@@ -97,3 +97,9 @@ npm install dotenv
         -   extract text
         -   convert to css file
         -   see "webpack.config.js" file to check this stuff
+
+## 11. User Authentication
+
+-   Passport : the middleware for helping control 'cookie'
+    -   `npm install passport-local-mongoose`
+-   Create User Model
