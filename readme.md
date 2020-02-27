@@ -98,8 +98,11 @@ npm install dotenv
         -   convert to css file
         -   see "webpack.config.js" file to check this stuff
 
-## 11. User Authentication
+## 11. User Authentication (02/27)
 
 -   Passport : the middleware for helping control 'cookie'
     -   `npm install passport-local-mongoose`
 -   Create User Model
+-   Joining, Logging in
+
+### 11-2 Sessions on Express (02/28)
