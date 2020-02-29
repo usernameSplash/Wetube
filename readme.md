@@ -104,5 +104,11 @@ npm install dotenv
     -   `npm install passport-local-mongoose`
 -   Create User Model
 -   Joining, Logging in
+-   send cookie with session (express-session)
 
-### 11-2 Sessions on Express (02/28)
+## 12. Github Authentication (02/29)
+
+-   Use the passport strategy for github
+-   There is a good manual for github authentication
+
+    if there is a request of github auth, user is sended to github page. agreeing to share info with my page, the authentication is processed by callback func.
