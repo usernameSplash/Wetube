@@ -1,4 +1,6 @@
 extends layouts/main
 
 block content
-	p userDetail
+	.header
+		img.avatar(src=user.avatarUrl)
+		h4=user
