@@ -71,12 +71,21 @@ export const logout = (req, res) => {
     res.redirect(routes.home);
 };
 
-export const me = (req, res) => {
+export const getMe = (req, res) => {
     res.render("userDetail", { pageTitle: "User Detail", user: req.user });
 };
 
 export const userDetail = async (req, res) => {
-    res.render("userDetail", { pageTitle: "User Detail" });
+    const {
+        params: { id },
+    } = req;
+    try {
+        const user = await User.findById(id);
+        res.render("userDetail", { pageTitle: "User Detail", user });
+    } catch (error) {
+        console.log(error);
+        res.redirect(routes.home);
+    }
 };
 export const editProfile = (req, res) => {
     res.render("editProfile", { pageTitle: "Edit Profile" });
