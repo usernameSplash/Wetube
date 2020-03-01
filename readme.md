@@ -112,3 +112,23 @@ npm install dotenv
 -   There is a good manual for github authentication
 
     if there is a request of github auth, user is sended to github page. agreeing to share info with my page, the authentication is processed by callback func.
+
+## Recap (03/01)
+
+### User Authentication
+
+#### Local Strategy
+
+1. Username and password are sent by post request.
+2. Moongoose automatically checks the user's infomation.
+3. If it's correct, moongoose notices the sign to passport.
+4. And then, passport create a new cookie data.
+
+#### Github Strategy
+
+1. User go to github page.
+2. User authorize everything in there.
+3. And then, github page give to us the infomation by "/auth/githubcallback"
+4. Callback function will be called.
+    - It must return callback function(parameter cb), with some sign(error, user).
+5. If user is valid, cookie data will be created.
