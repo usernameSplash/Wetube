@@ -28,7 +28,8 @@ export const postJoin = async (req, res, next) => {
     }
 };
 
-export const getLogin = (req, res) => res.render("login", { pageTitle: "Log In" });
+export const getLogin = (req, res) =>
+    res.render("login", { pageTitle: "Log In" });
 
 export const postLogin = passport.authenticate("local", {
     failureRedirect: routes.login,
@@ -63,6 +64,21 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
 };
 
 export const postGithubLogIn = (req, res) => {
+    res.redirect(routes.home);
+};
+
+export const fbLogin = passport.authenticate("facebook");
+
+export const fbLoginCallback = async (
+    accessToken,
+    refreshToken,
+    profile,
+    cb,
+) => {
+    console.log(accessToken, refreshToken, profile, cb);
+};
+
+export const postFbLogin = (req, res) => {
     res.redirect(routes.home);
 };
 
