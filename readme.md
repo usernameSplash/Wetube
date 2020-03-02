@@ -132,3 +132,13 @@ npm install dotenv
 4. Callback function will be called.
     - It must return callback function(parameter cb), with some sign(error, user).
 5. If user is valid, cookie data will be created.
+
+## 13. Facebook Authentication (03/02)
+
+It is not much difference from Github strategy. But Facebook authentication is a little bit complex.
+
+For get the authorization of Facebook, we must use **https**.
+
+### Install ngrok
+
+ngrok is provide https tunnel to our server.
