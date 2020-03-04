@@ -133,12 +133,20 @@ npm install dotenv
     - It must return callback function(parameter cb), with some sign(error, user).
 5. If user is valid, cookie data will be created.
 
-## 13. Facebook Authentication (03/02)
+## ~~13. Facebook Authentication (03/02)~~
 
-It is not much difference from Github strategy. But Facebook authentication is a little bit complex.
+~~It is not much difference from Github strategy. But Facebook authentication is a little bit complex.~~
 
-For get the authorization of Facebook, we must use **https**.
+~~or get the authorization of Facebook, we must use **https**.~~
 
-### Install ngrok
+### ~~Install ngrok~~
 
-ngrok is provide https tunnel to our server.
+~~ngrok is provide https tunnel to our server.~~
+
+## 14. Kakao Authentication (03/04)
+
+I gave up everything about Facebook Authentication, because it's so annoying.
+
+The strategy of kakao is simple, and good.
+
+Almost same with github.
