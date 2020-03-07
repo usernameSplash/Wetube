@@ -160,3 +160,5 @@ Almost same with github.
     - Also, video should be modified by only uploader.
 
 Adding creator's infomation into video.
+
+## 16. Relationships and Route Protection(03/07)
