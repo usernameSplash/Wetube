@@ -151,14 +151,16 @@ The strategy of kakao is simple, and good.
 
 Almost same with github.
 
-## 15. Relationships and Route Protection(03/05)
+## 15. Relationships and Route Protection(03/05, 03/07)
 
 1. User Detail
     - one's profile should be changed by only himself(herself)
     - show the buttons "edit profile", "change password" to only account owner.
+
+## 16. Relationships and Route Protection(03/08)
+
 2. Video Detail
     - Also, video should be modified by only uploader.
+    - Each video has its uploader.
 
 Adding creator's infomation into video.
-
-## 16. Relationships and Route Protection(03/07)
