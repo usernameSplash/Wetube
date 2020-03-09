@@ -164,3 +164,9 @@ Almost same with github.
     - Each video has its uploader.
 
 Adding creator's infomation into video.
+
+## 17. Protecting Video Routes
+
+A video can be edited and delted by only its creator.
+
+Improvement User Detail
