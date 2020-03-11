@@ -176,3 +176,4 @@ Improvement User Detail
 Customized Video Player
 
 -   Play, Pause Button
+-   Mute, Unmute Buttondmd
