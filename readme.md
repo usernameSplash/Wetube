@@ -174,3 +174,5 @@ Improvement User Detail
 ## 18. Video Player (03/11)
 
 Customized Video Player
+
+-   Play, Pause Button
