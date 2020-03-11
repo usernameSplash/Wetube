@@ -170,3 +170,7 @@ Adding creator's infomation into video.
 A video can be edited and delted by only its creator.
 
 Improvement User Detail
+
+## 18. Video Player (03/11)
+
+Customized Video Player
