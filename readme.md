@@ -178,3 +178,4 @@ Customized Video Player
 -   Play, Pause Button
 -   Mute, Unmute Buttond
 -   Fullscreen Button
+-   Video running time
