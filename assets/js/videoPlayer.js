@@ -69,21 +69,25 @@ const formatDate = seconds => {
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
-    if (totalSeconds < 10) {
+    if (seconds < 10) {
         totalSeconds = `0${totalSeconds}`;
     }
     return `${hours}:${minutes}:${totalSeconds}`;
 };
 
-function setCurrentTime() {
+function getCurrentTime() {
     currentTime.innerHTML = formatDate(Math.floor(videoPlayer.currentTime));
 }
 
 function setTotalTime() {
     const totalTimeString = formatDate(videoPlayer.duration);
-    console.log(totalTimeString);
     totalTime.innerHTML = totalTimeString;
-    setInterval(setCurrentTime, 1000);
+    setInterval(getCurrentTime, 100);
+}
+
+function handleEnded() {
+    // videoPlayer.currentTime = 0;
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
 }
 
 function init() {
@@ -93,6 +97,7 @@ function init() {
     volumeBtn.addEventListener("click", handleVolumeClick);
     fullScrnBtn.addEventListener("click", goFullScreen);
     videoPlayer.addEventListener("loadedmetadata", setTotalTime);
+    videoPlayer.addEventListener("ended", handleEnded);
 }
 
 if (videoContainer) {
