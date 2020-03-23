@@ -179,3 +179,13 @@ Customized Video Player
 -   Mute, Unmute Buttond
 -   Fullscreen Button
 -   Video running time
+
+## 19. Video Player - 2 (03/22)
+
+-   Volume Bar
+
+## 20. Recording Video
+
+-   Getting User Media(Authorize, Media device)
+-   Record and Upload
+    -   Creates a new `MediaRecorder` Object, given a `MediaStream` to record.
