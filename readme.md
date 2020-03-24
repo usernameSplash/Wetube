@@ -184,8 +184,14 @@ Customized Video Player
 
 -   Volume Bar
 
-## 20. Recording Video
+## 20. Recording Video (03/23)
 
 -   Getting User Media(Authorize, Media device)
 -   Record and Upload
     -   Creates a new `MediaRecorder` Object, given a `MediaStream` to record.
+
+## 21. API - Registering a view (03/24)
+
+-   Views
+
+## 22. API - Adding a comment
