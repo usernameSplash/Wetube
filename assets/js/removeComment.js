@@ -29,7 +29,7 @@ async function handleDeleteButton(event) {
 
 const init = () => {
     deleteBtnArr = commentList.getElementsByClassName("deleteBtn");
-    console.log(Array.isArray(deleteBtnArr));
+
     Array.prototype.forEach.call(deleteBtnArr, deleteBtn =>
         deleteBtn.addEventListener("click", handleDeleteButton),
     );
