@@ -1,6 +1,7 @@
 import routes from "../routes";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
+import User from "../models/User";
 
 export const home = async (req, res) => {
     try {
@@ -39,6 +40,7 @@ export const postUpload = async (req, res) => {
     const {
         body: { title, description },
         file: { path },
+        user,
     } = req;
     const newVideo = await Video.create({
         fileUrl: path,
@@ -47,8 +49,8 @@ export const postUpload = async (req, res) => {
         creator: req.user.id,
     });
 
-    req.user.videos.push(newVideo.id);
-    req.user.save();
+    user.videos.push(newVideo.id);
+    user.save();
     res.redirect(routes.videoDetail(newVideo.id));
 };
 
@@ -59,7 +61,8 @@ export const videoDetail = async (req, res) => {
     try {
         const video = await Video.findById(id)
             .populate("creator")
-            .populate("comments");
+            .populate({ path: "comments", populate: { path: "creator" } });
+
         res.render("videoDetail", { pageTitle: video.title, video });
     } catch (error) {
         console.log(error);
@@ -146,8 +149,32 @@ export const postAddComment = async (req, res) => {
             text: comment,
             creator: user.id,
         });
+        user.comments.push(newComment.id);
         video.comments.push(newComment.id);
         video.save();
+    } catch (error) {
+        res.status(400);
+    } finally {
+        res.end();
+    }
+};
+
+//Delete a Comment
+export const postDeleteComment = async (req, res) => {
+    const {
+        params: { id },
+        body: { comment },
+    } = req;
+
+    try {
+        const video = await Video.findById(id)
+            .populate("creator")
+            .populate("comments");
+        const commentIndex = video.comments.indexOf({ text: comment });
+        const deletedComment = video.comments.splice(commentIndex, 1);
+        video.save();
+        const deletedCommentID = deletedComment[0].id;
+        await Comment.findByIdAndDelete(deletedCommentID);
     } catch (error) {
         res.status(400);
     } finally {

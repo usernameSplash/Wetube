@@ -1,4 +1,5 @@
 import axios from "axios";
+import handleDeleteButton from "./removeComment";
 
 const addCommentForm = document.getElementById("jsAddComment");
 const commentList = document.getElementById("jsCommentList");
@@ -11,20 +12,31 @@ function increaseNumber() {
 function addComment(comment) {
     const li = document.createElement("li");
     const span = document.createElement("span");
+
+    const button = document.createElement("button");
+    const i = document.createElement("i");
+
     span.innerHTML = comment;
     li.appendChild(span);
+
+    i.classList.add("fas", "fa-trash-alt");
+
+    button.classList.add("deleteBtn");
+    button.addEventListener("click", handleDeleteButton);
+    button.appendChild(i);
+    li.appendChild(button);
+
     commentList.prepend(li);
     increaseNumber();
 }
 
 async function sendComment(comment) {
     const id = window.location.href.split("/videos/")[1];
+    console.log(id);
     const response = await axios({
         url: `/api/${id}/comment`,
         method: "POST",
-        data: {
-            comment,
-        },
+        data: { comment },
     });
     if (response.status === 200) {
         addComment(comment);
