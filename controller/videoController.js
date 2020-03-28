@@ -1,7 +1,6 @@
 import routes from "../routes";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
-import User from "../models/User";
 
 export const home = async (req, res) => {
     try {
@@ -39,11 +38,11 @@ export const getUpload = (req, res) =>
 export const postUpload = async (req, res) => {
     const {
         body: { title, description },
-        file: { path },
+        file: { location },
         user,
     } = req;
     const newVideo = await Video.create({
-        fileUrl: path,
+        fileUrl: location,
         title,
         description,
         creator: req.user.id,
